@@ -2,37 +2,46 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import { Images } from "@/components/images"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
+    <section className="flex gap-6">
+      <div className="container pl-10 sm:pl-36  gap-6 pb-8 pt-6 md:py-10">
+        <div className="flex max-w-[980px] flex-col items-start gap-2">
+          <h1 className="pt-24 text-5xl font-display leading-tight tracking-tighter sm:text-5xl md:text-8xl lg:text-9xl">
+            Ideas <br className="hidden sm:inline" />
+            Developed.
+          </h1>
+          <p className="pt-8 pb-24 max-w-[700px] font-body text-lg text-muted-foreground sm:text-xl">
+            We at <strong className="font-display">Splitscale</strong> are aimed
+            to help turn your exciting ideas into reality.
+          </p>
+        </div>
+
+        <div className="flex flex-row-reverse sm:flex-row gap-4">
+          <Link
+            href={siteConfig.nav.sales}
+            target="_blank"
+            rel="noreferrer"
+            className={buttonVariants({ variant: "default", size: "lg" })}
+          >
+            Contact sales
+          </Link>
+
+          <Link
+            href={siteConfig.nav.products}
+            target="_blank"
+            rel="noreferrer"
+            className={buttonVariants({ variant: "ghost", size: "lg" })}
+          >
+            See products
+          </Link>
+        </div>
       </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants({ size: "lg" })}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline", size: "lg" })}
-        >
-          GitHub
-        </Link>
+      <div className="flex  relative  items-center pb-8 pt-6 md:py-10">
+        <div className="scale-125 absolute z-10">{Images.particles()}</div>
+        <div className=" z-0">{Images.hero()}</div>
       </div>
     </section>
   )

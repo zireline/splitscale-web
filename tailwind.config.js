@@ -9,7 +9,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1920px",
       },
     },
     extend: {
@@ -55,6 +55,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        display: ["codec-cold-extraBold", "sans-serif"],
+        body: ["codec-cold-regular", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -72,5 +74,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-3d")({ legacy: true }),
+  ],
 }
