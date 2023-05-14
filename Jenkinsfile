@@ -58,5 +58,5 @@ pipeline {
 }
 
 def runServer() {
-  sh 'docker run --name splitscale-web -p 80:3000 -d kasutu/splitscale-web:latest'
+  sh 'docker run --name splitscale-web -p 8000:3000 -d --restart=on-failure kasutu/splitscale-web:latest'
 }
