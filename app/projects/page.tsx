@@ -1,6 +1,6 @@
 import { Images } from "@/components/images"
 
-export function ProjectsPage(...args: any[]) {
+export default function ProjectsPage(...args: any[]) {
   return (
     <section className="container sticky top-0 flex flex-col space-y-72 mb-[300px]">
       <div className="flex flex-row-reverse items-center ">
