@@ -10,15 +10,15 @@ export const siteConfig = {
     },
     {
       title: "Projects",
-      href: "/",
+      href: "/projects",
     },
     {
       title: "Contact",
-      href: "/",
+      href: "/contact",
     },
     {
       title: "Team",
-      href: "/",
+      href: "/team",
     },
   ],
   nav: { sales: "/", products: "/" },

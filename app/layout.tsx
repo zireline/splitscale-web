@@ -4,9 +4,12 @@ import { Metadata } from "next"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { Footer } from "@/components/footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+
+import { ProjectsPage } from "./projects/page"
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +48,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <SiteHeader />
               <div className="flex-1">{children}</div>
             </div>
+            <div className="relative flex min-h-screen flex-col">
+              <ProjectsPage />
+            </div>
+
+            <Footer />
+
             <TailwindIndicator />
           </ThemeProvider>
         </body>
