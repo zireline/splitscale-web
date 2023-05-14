@@ -26,7 +26,7 @@ export default function IndexPage() {
             rel="noreferrer"
             className={buttonVariants({ variant: "default", size: "lg" })}
           >
-            Contact sales
+            Start now
           </Link>
 
           <Link
@@ -35,13 +35,15 @@ export default function IndexPage() {
             rel="noreferrer"
             className={buttonVariants({ variant: "ghost", size: "lg" })}
           >
-            See products
+            Take tour
           </Link>
         </div>
       </div>
+
       <div className="flex  relative  items-center pb-8 pt-6 md:py-10">
-        <div className="scale-125 absolute z-10">{Images.particles()}</div>
-        <div className=" z-0">{Images.hero()}</div>
+        <div className="scale-[2.3] translate-y-[-5rem] translate-x-20 z-0">
+          {Images.hero}
+        </div>
       </div>
     </section>
   )

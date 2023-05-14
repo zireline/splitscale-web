@@ -1,20 +1,8 @@
 import Image from "next/image"
 
 export const Images = {
-  hero: () => (
-    <Image
-      src="/card-display.svg"
-      width={1000}
-      height={1000}
-      alt="Picture of the author"
-    />
+  hero: (
+    <Image src="/pc-vector-bg.svg" width={5000} height={5000} alt="vector pc" />
   ),
-  particles: () => (
-    <Image
-      src="/stars-display.svg"
-      width={2000}
-      height={2000}
-      alt="Picture of the author"
-    />
-  ),
+  psse: <Image src="/psse-logo.png" width={80} height={80} alt="psse logo" />,
 }
