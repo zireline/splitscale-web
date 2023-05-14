@@ -17,23 +17,6 @@ pipeline {
             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/splitscale/splitscale-web.git']]])
           }
         }
-
-        stage('install') {
-          steps {
-            script {
-              sh 'npm install'
-            }
-          }
-        }
-
-        stage('build') {
-          steps {
-            script {
-              sh 'npm run build'
-            }
-          }
-        }
-
         
         stage('build docker image') {
           steps {
